@@ -1,0 +1,39 @@
+body, html {
+	height: 100%;
+}
+
+nav.sidebar, .main {
+	-webkit-transition: margin 200ms ease-out;
+	-moz-transition: margin 200ms ease-out;
+	-o-transition: margin 200ms ease-out;
+	transition: margin 200ms ease-out;
+}
+
+.main {
+	padding: 10px 10px 0 10px;
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus
+	{
+	color: #CCC;
+	background-color: transparent;
+}
+
+nav:hover .forAnimate {
+	opacity: 1;
+}
+
+section {
+	padding-left: 15px;
+}
+
+
+
+
+.left-margin {
+	margin-right: 10px;
+}
+
+.input-error {
+	color: #ff3333;
+}
