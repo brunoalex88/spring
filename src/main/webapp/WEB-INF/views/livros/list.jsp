@@ -9,6 +9,10 @@
 	<jsp:body>
 		<div class="container">
 			
+			<div class="row">
+				<p align="right"><a href="<c:url value="/shopping" />">Seu carrinho: ${shoppingCart.quantity}</a></p>
+			</div>
+			
 			<c:forEach items="${livros}" var="livro" varStatus="status">
 				
 				<div class="col-md-4">
@@ -18,7 +22,8 @@
 				    <div class="caption">
 				      <h3>${livro.title}</h3>
 				      <p>${livro.summaryPath}</p>
-				      <p><a href="#" class="btn btn-primary" role="button">Detalhes</a></p>
+				      <p><a href="${spring:mvcUrl('LC#show').arg(0, livro.id).build()}"
+				      		class="btn btn-primary" role="button">Detalhes</a></p>
 				    </div>
 				  </div>
 				</div>				

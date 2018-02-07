@@ -49,4 +49,12 @@ public class LivroController {
 		return modelAndView;
 	}
 	
+	@RequestMapping(value="/show")
+	public ModelAndView show(Integer id) {
+		ModelAndView view = new ModelAndView("livros/show");
+		view.addObject("livro", livroDAO.find(id));
+		return view;
+	}
+	
+	
 }

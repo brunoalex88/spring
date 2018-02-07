@@ -8,8 +8,8 @@
 
 	<jsp:body>
 		
-		<form:form action="${spring:mvcUrl('LC#save').build()}" 
-				commandName="livro" method="post">
+		<form:form action="${spring:mvcUrl('LC#save').build()}"
+			commandName="livro" method="post">
 
 			<div class="container">
 				
@@ -46,8 +46,8 @@
 				<div class="form-group">
 					<label for="label-file">Capa do livro</label>
 					<label class="btn btn-primary" for="imagem" id="label-file">
-					    <form:input type="file" cssStyle="display:none" path="imagem" 
-					    		onchange="$('#upload-file-info').html(this.files[0].name)" />
+					    <form:input type="file" cssStyle="display:none" path="imagem"
+							onchange="$('#upload-file-info').html(this.files[0].name)" />
 					    Escolher
 					</label>
 					<form:errors path="imagem" cssClass="input-error" />
@@ -59,10 +59,12 @@
 						<div class="col-md-4 col-xs-1">
 							<div class="form-group">
 								<label for="prices[${status.index}].value">VALOR ${bookType}</label>
-								<form:input path="prices[${status.index}].value" cssClass="form-control" />
-								<form:errors path="prices[${status.index}].value" cssClass="input-error" />
+								<form:input path="prices[${status.index}].value"
+									cssClass="form-control" />
+								<form:errors path="prices[${status.index}].value"
+									cssClass="input-error" />
 								<input type="hidden" name="prices[${status.index}].bookType"
-										value="${bookType}" />
+									value="${bookType}" />
 							</div>
 						</div>
 					</c:forEach>
